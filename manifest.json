@@ -1,18 +1,18 @@
 {
-    "manifest_version": 3,
-    "name": "Ytb-direct-link-ext",
-    "version": "1.0",
-  
-    "description": "Gets direct URL from youtube video",
-  
-    "icons": {
-      "48": "icons/Ytb-directURL.png"
-    },
-  
-    "content_scripts": [
-      {
-        "matches": ["*://*.youtube.com/*"],
-        "js": ["main.js"]
-      }
-    ]
-  }
+  "manifest_version": 3,
+
+  "name": "Ytb-direct-link-ext",
+  "version": "1.0",
+  "description": "Gets direct URL from youtube video",
+  "permissions": ["activeTab", "scripting"],
+
+  "icons": {
+    "128": "icons/Ytb-DirectURL-128x128.png"
+  },
+
+  "background": {
+    "service_worker": "backgroundNew.js"
+  },
+
+  "action": {}
+}
